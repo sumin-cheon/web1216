@@ -30,23 +30,29 @@ img{border:none;}
 .disN{display: none;}
 .disIB{display:inline-block;}
 /* inspector */
+/*애니메이션 불가 display  값 auto인 것--> keyframe도 안된다는 것 {
 
+}*/
 
-
+/*레이아웃*/
 header#hd{ padding:15px 0}
 #hd a, #hd img{display: block;}
 #gnb> li{ height: 46px;}
 #gnb >li >a{font-weight: bold; font-size: 18px; line-height: 46px;
-          margin-left:2em; padding-bottom: 15px; background: yellow;
+          margin-left:2em; padding-bottom: 15px; /*background: yellow;*/
            }
 #gnb .d2{
   background-color:black; top:calc(100% + 15px); left:15px; padding:0 15px;
 width:100px; height: 0; transition: 0.5s; overflow: hidden;}
 #gnb, .d2 a{ font-size: 0.9em; line-height: 1.5;}
+#gnb .d2:before{content: ""; display:block; height: 15px;}
 
 #gnb li:nth-child(1) .d2{left:30px}
 #gnb li:nth-child(4) .d2{width:70px}
 
-#gnb > li:hover .d2 {display: block;height: 120px;}
+/* 마우스가 올라간 대메뉴 li 속 소메뉴 .d2의 높이가 120이 돼라 */
+#gnb > li:hover .d2 {display: block; height: 120px;}
+/*마우스가 올라가 대메뉴 li속 대메뉴 a의 속상 */
+#gnb > li:hover > a{color:#009688;}
 section#main{}
 footer#fd{}
